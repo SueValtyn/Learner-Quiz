@@ -1,86 +1,126 @@
 const firebaseConfig = {
-apiKey: "AIzaSyCgSCtC4TnfNYvNNpxP8I3NLSza0mAbKw4",
-authDomain: "my-app-1fd34.firebaseapp.com",
-databaseURL: "https://my-app-1fd34-default-rtdb.firebaseio.com",
-projectId: "my-app-1fd34",
-storageBucket: "my-app-1fd34.appspot.com",
-messagingSenderId: "166968764883",
-appId: "1:166968764883:web:bde8c9fa16241a28d36726",
-measurementId: "G-BWF4ME9HV4"
+    apiKey: "",
+    authDomain: "",
+    databaseURL: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: "",
+    appId: ""
 };
 
 firebase.initializeApp(firebaseConfig);
-const auth = firebase.auth()
-const database = firebase.database()
-
-  /*/ Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-  //Initialize variables
-const auth= firebase.auth()
-const database = firebase.database();*/
+const auth = firebase.auth();
+const database = firebase.database();
 
 function register() {
-    email= document.getElementById('email');
-    password= document.getElementById('password');
-    username= document.getElementById('username');
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const username = document.getElementById('username').value;
 
-     //Validate textboxes
-     if (validate_email(email) == false || validate_password(password)== false);{
-        alert('Email or password is not detected.');
-}
-   auth.createUserWithEmail(email, password).then(function(){
-    var user = auth.currentUser
+    // Validate textboxes
+    if (!validate_email(email) || !validate_password(password)) {
+        alert('Email or password is not valid.');
+        return;
+    }
 
-    //Send email verification
-    user.sendEmailVerification()
-    .then(function(){
-        alert("Email sent. Please check your inbox.");
-    })
-    .catch(function(error){
-        console.log(error.message);
-   });
+    auth.createUserWithEmailAndPassword(email, password)
+        .then(function () {
+            var user = auth.currentUser;
 
-   var database_ref = database_ref()
+            // Send email verification
+            user.sendEmailVerification()
+                .then(function () {
+                    alert("Email sent. Please check your inbox.");
+                })
+                .catch(function (error) {
+                    console.log(error.message);
+                });
 
-   //Create the user account
-   var user_data = {
-    email: email,
-    username: username,
-    last_login: Date.now(),
-   }
- database_ref.child('user/' + user.uid).set(user_data)
-alert('Welcome to our app. Thanks for signing up!')
-setTimeout(function(){
-window.location.href ='/login.html';
-}, 500);
-})
-.catch(function(error) {
-    var error_code = error.code
-    var error_message = error.message
+            var database_ref = database.ref();
 
-    alert(error_message)
-})
-
+            // Create the user account
+            var user_data = {
+                email: email,
+                username: username,
+                last_login: Date.now(),
+            };
+            database_ref.child('user/' + user.uid).set(user_data);
+            alert('Welcome to our app. Thanks for signing up!');
+            setTimeout(function () {
+                window.location.href = '/login.html';
+            }, 500);
+        })
+        .catch(function (error) {
+            var error_message = error.message;
+            alert(error_message);
+        });
 }
 
 function login() {
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
+    if (validate_email(email) == false || validate_password(password) == false) {
+        alert("Email or password is not valid")
+        return
+    }
+
     // Sign in with email and password
     auth.signInWithEmailAndPassword(email, password)
-        .then(() => {
-            // Redirect to login page
-            window.location.href = '/login.html';
+        .then(function () {
+            var user = auth.currentUser
+
+            var database_ref = database.ref()
+
+            var user_data = {
+                last_login: Date.now()
+            }
+
+            database_ref.child('user/' + user.uid).update(user_data)
+
+            alert('User logged in')
+            setTimeout(function () {
+                window.location.href = '/app.html';
+            }, 500);
         })
-        .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            alert(InvalidUsernameorPassword);
-        });
+        .catch(function (error) {
+            var error_code = error.code
+            var error_message = error.message
+
+            alert(error_message)
+        })
 }
 
+function validate_email(email) {
+    expression = /^[^@]+@\w+(\.\w+)+\w$/
+    if (expression.test(email) == true) {
+        return true
+    } else {
+        return false
+    }
+}
+
+function validate_password(password) {
+    if (password < 6) {
+        return false
+    } else {
+        return true
+    }
+}
+
+function validate_field(field) {
+    if (field == null) {
+        return false
+    } else {
+        return true
+    }
+
+    if (field.length <= 0) {
+        return false
+    } else {
+        true
+    }
+}
 
 const questions = [
     {
@@ -166,7 +206,7 @@ function displayQuestion() {
             optionsElement.appendChild(label);
         }
         if (currentQuestionIndex === 0) {
-           updateTimer();
+            updateTimer();
         }
     } else {
         endQuiz();
@@ -217,7 +257,7 @@ function updateTimer() {
 }
 
 function endQuiz() {
-   clearInterval(timerInterval);
+    clearInterval(timerInterval);
 
     const quizContainer = document.getElementById("quiz-container");
 
