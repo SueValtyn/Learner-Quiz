@@ -1,0 +1,142 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+#quiz-container {
+  margin-top: 3rem;
+  width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-top: 30px;
+}
+
+#options-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.option {
+  margin: 10px 0;
+}
+
+.option:hover {
+  background-color: #ff7f00;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.option input[type="radio"]:hover {
+  cursor: pointer;
+}
+
+.option input[type="radio"]:checked + span {
+  font-weight: bold;
+  color: #ff7f00;
+}
+
+#timer-container {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 30px;
+  z-index: 10;
+}
+
+#submit-btn {
+  background-color: #ff7f00;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+#submit-btn:hover {
+  background-color: #ffa233;
+}
+
+#previous-btn {
+  background-color: #ff7f00;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  margin-right: 10px; /* Add spacing between the buttons */
+}
+
+#previous-btn:hover {
+  background-color: #ffa233;
+}
+
+#timer-container {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+}
+
+#timer-progress {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.circle-svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.circle-background,
+.circle-progress {
+  fill: none;
+  stroke-width: 8;
+  stroke-linecap: round;
+}
+
+.circle-background {
+  stroke: #f5f5f5;
+}
+
+#timer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-pop {
+  animation: pop 0.3s;
+}
