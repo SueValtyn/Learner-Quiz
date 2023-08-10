@@ -1,0 +1,112 @@
+[
+    {
+      "day": 1,
+      "question": "The FAIS General Code of Conduct requires that representatives fulfill the following responsibilities. Which statement is incorrect?",
+      "options": [
+        "They have to act honestly and fairly, and with due skill, care and diligence, in the interests of clients and the integrity of the financial services industry.",
+        "They must have and effectively employ the resources, procedures and appropriate technological systems for the proper performance of professional activities.",
+        "They have to ensure that clients can make an informed decision by providing a client with at least three quotations when recommending financial products.",
+        "They should obtain appropriate and available information regarding clients financial situation, financial product experience and objectives in connection with the financial service required."
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "day": 1,
+      "question": "Select the correct option. The key individual may:",
+      "options": [
+        "Fulfill two roles, namely that of being a key individual as well as that of a representative.",
+        "May only act as a key individual.",
+        "May not be a representative.",
+        "May not be a director of an FSP."
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "day": 1,
+      "question": "Choose the correct option:",
+      "options": [
+        "The Registrar registers representatives provided they meet certain criteria.",
+        "The FSP authorises a representative to represent it, provided the representative meets the “fit and proper” criteria stipulated in the FAIS Act, including financial soundness, and then has to maintain a register with certain details as required by the Act.",
+        "The FSP authorises a representative to represent it, provided the representative meets the “fit and proper” criteria stipulated in the FAIS Act, excluding financial soundness, and then has to maintain a register with certain details as required by the Act.",
+        "The FSP authorises a representative to represent it, provided the representative meets the “fit and proper“ criteria stipulated in the FAIS Act, excluding financial soundness, and then the Registrar registers the representative."
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "day": 1,
+      "question": "Select the correct option.",
+      "options": [
+        "An individual first has to undergo a period of supervision before they can be registered as a representative.",
+        "A “one-man” brokerage has no representatives and therefore the owner does not have to register as a representative.",
+        "FAIS determines that any individual who wants to render a financial service to clients has to be a registered representative.",
+        "An individual has to be registered within 12 months after having completed their supervision phase."
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "day": 1,
+      "question": "Select the incorrect option. The new fit and proper requirements announced on 15 October 2008 in the Government Gazette that are applicable to representatives are:",
+      "options": [
+        "Personal character qualities and competency requirements.",
+        "Experience requirements and qualifications.",
+        "Regulatory examinations and continuous professional development.",
+        "Operational ability and financial soundness."
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "day": 1,
+      "question": "The register of representatives does not have to:",
+      "options": [
+        "Contain every representative or key individual’s name and business address.",
+        "State whether the representative acts for the provider as employee or as mandatory.",
+        "Specify the categories in which such representatives are competent to render financial services.",
+        "The continued compliance by representatives with the requirements referred to in section 13 (1) and (2)."
+      ],
+      "correctAnswer":3
+    },
+    {
+        "day": 1,
+        "question": "The register of representatives does not have to:",
+        "options": [
+          "Contain every representative or key individual’s name and business address.",
+          "State whether the representative acts for the provider as employee or as mandatory.",
+          "Specify the categories in which such representatives are competent to render financial services.",
+          "The continued compliance by representatives with the requirements referred to in section 13 (1) and (2)."
+        ],
+        "correctAnswer":3
+      },
+      {
+        "day": 1,
+        "question": "The register of representatives does not have to:",
+        "options": [
+          "Contain every representative or key individual’s name and business address.",
+          "State whether the representative acts for the provider as employee or as mandatory.",
+          "Specify the categories in which such representatives are competent to render financial services.",
+          "The continued compliance by representatives with the requirements referred to in section 13 (1) and (2)."
+        ],
+        "correctAnswer":3
+      },
+      {
+        "day": 1,
+        "question": "The register of representatives does not have to:",
+        "options": [
+          "Contain every representative or key individual’s name and business address.",
+          "State whether the representative acts for the provider as employee or as mandatory.",
+          "Specify the categories in which such representatives are competent to render financial services.",
+          "The continued compliance by representatives with the requirements referred to in section 13 (1) and (2)."
+        ],
+        "correctAnswer":3
+      },
+      {
+        "day": 1,
+        "question": "The register of representatives does not have to:",
+        "options": [
+          "Contain every representative or key individual’s name and business address.",
+          "State whether the representative acts for the provider as employee or as mandatory.",
+          "Specify the categories in which such representatives are competent to render financial services.",
+          "The continued compliance by representatives with the requirements referred to in section 13 (1) and (2)."
+        ],
+        "correctAnswer":3
+      }
+]
