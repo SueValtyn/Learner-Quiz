@@ -1,12 +1,12 @@
-const firebaseConfig = {
-    apiKey: "AIzaSyCoBIll0AdjYbD-eYw2kb80qRnE_K-DWB0",
-    authDomain: "my-app-be3b8.firebaseapp.com",
-    databaseURL: "https://my-app-be3b8-default-rtdb.firebaseio.com",
-    projectId: "my-app-be3b8",
-    storageBucket: "my-app-be3b8.appspot.com",
-    messagingSenderId: "387573300234",
-    appId: "1:387573300234:web:fc25c51e89050a7af533f3"
-};
+const firebaseConfig = { 
+    apiKey: "AIzaSyBJ9ZBhO0uhbT49B2zfN-qaOC1oe_smD7M",
+    authDomain: "quiz-5d543.firebaseapp.com",
+    projectId: "quiz-5d543",
+    storageBucket: "quiz-5d543.appspot.com",
+    messagingSenderId: "265565721839",
+    appId: "1:265565721839:web:c2308b05c16d9a7e19371a",
+    measurementId: "G-5C90LXEXFZ"  
+    };
 
 firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
@@ -213,7 +213,7 @@ function displayQuestion() {
     }
 }
 
-function handleSubmission() {
+function handlebutton() {
     const selectedAnswer = document.querySelector('input[name="answer"]:checked');
 
     if (selectedAnswer) {
@@ -268,7 +268,10 @@ function endQuiz() {
 }
 
 // Event listeners
-document.getElementById("submit").addEventListener("click", handleSubmission);
+document.getElementById("submit").addEventListener("click", handlebutton);
+        
+
+
 
 // Initialize the quiz
 displayQuestion();
